@@ -50,3 +50,36 @@ A simple browser-based **Whack-a-Mole** game where you aim to click the mole as 
 - Sound effects  
 - Scoreboard
 
+Game-3
+# Connect Four Game
+
+A simple 2-player Connect Four game built using HTML, CSS, and JavaScript.
+
+## How to Play
+
+Players take turns dropping discs into columns.
+
+First to connect 4 in a row (horizontally, vertically, or diagonally) wins.
+
+Click a column to place your piece.
+
+Invalid moves are blocked.
+
+## Features
+
+Two-player mode
+
+Turn tracking
+
+Win detection
+
+Basic alert on invalid moves
+
+## Tech Stack
+
+HTML
+
+CSS
+
+JavaScript
+
