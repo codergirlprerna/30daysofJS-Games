@@ -1,7 +1,9 @@
 const squares = document.querySelectorAll('.square')
 const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
-
+const highScoreDisplay = document.querySelector('#high-score')
+highScoreDisplay.textContent = localStorage.getItem('highScore') || 0
+ 
 let result = 0
 let hitPosition
 let currentTime = 60
@@ -39,7 +41,13 @@ function countDown() {
   if (currentTime === 0) {
     clearInterval(countDownTimerId)
     clearInterval(timerId)
-    alert('Game Over! Your final score is: ' + result)
+    const previousScore = localStorage.getItem('highScore') || 0
+    if (result > previousScore) {
+      localStorage.setItem('highScore', result)
+      alert(` New High Score! You scored ${result} (Previous: ${previousScore})`)
+    } else {
+      alert(`Game Over! Your score: ${result}. Best score: ${previousScore}`)
+    }
   }
 }
 
